@@ -25,6 +25,10 @@
   font-size: clamp(1rem, 2.5vw, 1.3rem); color: rgba(245, 230, 195, 0.85);
   margin-top: 1.25rem; font-style: italic; animation: fadeUp 0.9s ease 0.3s both;
 }
+.herophrase {
+  font-size: clamp(1rem, 2.5vw, 1.3rem); color: rgb(255, 36, 36);
+  margin-top: 1.25rem; font-weight: 600; animation: fadeUp 0.9s ease 0.4s both; font-style: italic;
+}
 .heroBtns {
   display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem;
   flex-wrap: wrap; animation: fadeUp 0.9s ease 0.45s both;

@@ -3,14 +3,11 @@ import TitreSection from '../components/TitreSection.jsx'
 import CartePhoto from '../components/CartePhoto.jsx'
 import styles from './Accueil.module.css'
 
-// ============================================================
-// ZONE À MODIFIER — Photo principale du hero (grande image fond)
-// Remplace par le chemin de ta photo de fond
-const PHOTO_HERO = '/images/collagemali.jpeg'
-// ============================================================
 
-// ============================================================
-// ZONE À MODIFIER — Les 4 cartes de la section "Ce qui rend le Mali unique"
+//  Photo principale du hero (grande image fond)
+const PHOTO_HERO = '/images/collagemali.jpeg'
+
+// cartes de la section "Ce qui rend le Mali unique"
 // Pour chaque carte : photo, titre, description
 const cartesAccueil = [
   {
@@ -34,7 +31,12 @@ const cartesAccueil = [
     description: "La Grande Mosquée de Djenné, joyau de l'architecture en pisé, est classée au patrimoine mondial de l'UNESCO.",
   },
 ]
-// ============================================================
+
+
+
+
+
+
 
 const chiffres = [
   { valeur: '22 M', label: 'habitants' },
@@ -47,17 +49,19 @@ export default function Accueil() {
   return (
     <div className={styles.page}>
 
-      {/* ===== HERO ===== */}
+      {/*  HERO  */}
       <section className={styles.hero} style={{ backgroundImage: `url(${PHOTO_HERO})` }}>
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroContenu}>
           <span className={styles.heroSurtitre}>Bienvenue au</span>
           <h1 className={styles.heroTitre}>Mali</h1>
           <p className={styles.heroAccroche}>Terre d'Histoire, de Culture et de Grandeur</p>
-          <div className={styles.heroBtns}>
+          <p className={styles.herophrase}>" Mali yé an yé, an yé Mali yé "</p>
+        {/*  <div className={styles.heroBtns}>
             <Link to="/histoire" className={styles.btnPrimaire}>Découvrir l'histoire</Link>
             <Link to="/galerie" className={styles.btnSecondaire}>Voir la galerie</Link>
-          </div>
+            
+          </div>  */}
         </div>
         <div className={styles.heroDrapeau}>
           <div className={styles.bande} style={{ background: '#14A060' }}></div>
@@ -66,7 +70,7 @@ export default function Accueil() {
         </div>
       </section>
 
-      {/* ===== CHIFFRES CLÉS ===== */}
+      {/*  quelques infos  */}
       <section className={styles.chiffres}>
         {chiffres.map((c) => (
           <div key={c.label} className={styles.chiffreItem}>
@@ -76,7 +80,7 @@ export default function Accueil() {
         ))}
       </section>
 
-      {/* ===== INTRODUCTION ===== */}
+      {/* INTRODUCTION */}
       <section className={styles.intro}>
         <div className={styles.container}>
           <div className={styles.introGrid}>
@@ -96,10 +100,9 @@ export default function Accueil() {
               <Link to="/histoire" className={styles.lienTexte}>Explorer l'histoire complète →</Link>
             </div>
 
-            {/* ============================================================
-                ZONE À MODIFIER — Photo de droite dans la section intro
-                Remplace par le chemin de ta photo
-            ============================================================ */}
+            {/* 
+               je dois Remplace par le chemin de la photo */}
+
             <div className={styles.introVisuel}>
               <img src="/images/cartemali.jpeg" alt="Carte du Mali" className={styles.introPhoto} />
             </div>

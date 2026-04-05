@@ -12,7 +12,10 @@ const PHOTO_ASKIA        = '/images/askia.jpeg'
 const PHOTO_COLONIAL     = '/images/coloni.jpeg'
 const PHOTO_INDEPENDANCE = '/images/monu.jpeg'
 const PHOTO_HERITAGE     = '/images/collagemali.jpeg'
-// ============================================================
+
+
+
+
 
 const friseEvenements = [
   { annee: '~300', titre: 'Empire du Ghana',             couleur: '#C8922A' },
