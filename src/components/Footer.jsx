@@ -9,7 +9,7 @@ export default function Footer() {
         <span style={{ background: '#CE1126' }}></span>
       </div>
       <p className={styles.texte}>Mali — Terre d'Histoire</p>
-      <p className={styles.sous}>Projet réalisé dans le cadre du cours de Développement Web Frontend</p>
+      <p className={styles.sous}> Réalisé par Koura Soumaré </p>
     </footer>
   )
 }
