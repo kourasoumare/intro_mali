@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './Histoire.module.css'
 
-// ============================================================
-// ZONE À MODIFIER — Photos de chaque section
+// Photos de chaque section
 const PHOTO_HERO         = '/images/empire.jpeg'
-const PHOTO_GHANA        = '/images/ghana.jpeg'
+const PHOTO_GHANA        = '/images/histoire.jpeg'
+const PHOTO_ghana        = '/images/ghana.jpeg'  
 const PHOTO_SOUNDIATA    = '/images/soundjata.jpeg'
 const PHOTO_MANSA        = '/images/mansamoussa.jpeg'
 const PHOTO_SONGHAI      = '/images/tombouctou.jpeg'
@@ -76,7 +76,7 @@ export default function Histoire() {
   return (
     <div className={styles.page}>
 
-      {/* ===== HERO ===== */}
+      {/*  HERO */}
       <section className={styles.hero} style={{ backgroundImage: `url(${PHOTO_HERO})` }}>
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroContenu}>
@@ -146,7 +146,7 @@ export default function Histoire() {
         <div className={styles.container}>
           <div className={styles.chapGrid}>
             <div className={styles.chapPhoto}>
-              <img src={PHOTO_GHANA} alt="Empire du Ghana" className={styles.chapImg} />
+              <img src={PHOTO_ghana} alt="Empire du Ghana" className={styles.chapImg} />
             </div>
             <div className={styles.chapTexte}>
               <span className={styles.chapEpoque}>~ 300 apr. J.-C.</span>
