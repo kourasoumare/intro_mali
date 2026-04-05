@@ -1,0 +1,211 @@
+.page { padding-top: 80px; min-height: 100vh; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background-size: cover; background-position: center;
+}
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,2,0.82) 0%, rgba(26,92,56,0.6) 50%, rgba(139,33,25,0.7) 100%);
+}
+.heroContenu { position: relative; z-index: 2; text-align: center; padding: 2rem; max-width: 800px; }
+.heroSurtitre {
+  display: inline-block; font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--or-clair); border: 1px solid rgba(232,184,75,0.4); padding: 0.4rem 1.2rem;
+  border-radius: 2rem; margin-bottom: 1.5rem; animation: fadeDown 0.8s ease both;
+}
+.heroTitre {
+  font-family: var(--font-titre); font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900; color: #fff; line-height: 1.05;
+  animation: fadeUp 0.9s ease 0.15s both;
+}
+.heroTexte {
+  font-size: clamp(0.95rem, 2vw, 1.15rem); color: rgba(255,255,255,0.82);
+  margin-top: 1.5rem; line-height: 1.8; font-style: italic;
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+.heroBarre {
+  display: flex; justify-content: center; gap: 0; margin-top: 2rem;
+  animation: fadeUp 0.9s ease 0.45s both;
+}
+.heroBarre span { width: 48px; height: 5px; }
+.heroScroll {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); animation: bounce 2s ease infinite;
+}
+
+/* ===== IDENTITÉ ===== */
+.identite { padding: 6rem 0; background: var(--blanc); }
+.identiteGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.identitePhoto { position: relative; }
+.identiteImg { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; }
+.identiteBadge {
+  position: absolute; bottom: -1rem; right: -1rem;
+  background: var(--or); color: var(--texte); font-size: 0.8rem; font-weight: 700;
+  padding: 0.6rem 1.2rem; border-radius: 2rem; letter-spacing: 0.05em;
+}
+.identiteTexte p { color: var(--texte-doux); line-height: 1.8; margin-bottom: 1rem; }
+.identiteTexte strong { color: var(--vert); }
+.ethniesGrid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.ethnieTag {
+  background: var(--sable); border: 1px solid var(--sable-fonce);
+  color: var(--terre); font-size: 0.8rem; font-weight: 600;
+  padding: 0.35rem 0.9rem; border-radius: 2rem; letter-spacing: 0.05em;
+  transition: background 0.2s, border-color 0.2s;
+}
+.ethnieTag:hover { background: var(--or-pale); border-color: var(--or); }
+
+/* ===== LABELS COMMUNS ===== */
+.surtitre {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--or); border-bottom: 2px solid var(--or);
+  padding-bottom: 3px; margin-bottom: 0.9rem; display: block;
+}
+.surtitreClair {
+  display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--or-clair); border-bottom: 2px solid var(--or);
+  padding-bottom: 3px; margin-bottom: 0.9rem;
+}
+.titreSec {
+  font-family: var(--font-titre); font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900; color: var(--texte); margin-bottom: 1.25rem;
+}
+.titreClair {
+  font-family: var(--font-titre); font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900; color: var(--or-pale); margin-bottom: 1.25rem;
+}
+.sousTitreClair {
+  font-family: var(--font-titre); font-size: 1.3rem; color: var(--or-clair);
+  margin: 3rem 0 1.5rem; text-align: center;
+}
+.sectionIntro {
+  font-size: 1rem; color: rgba(245,230,195,0.8); line-height: 1.8;
+  max-width: 700px; margin: 0 auto 3rem; text-align: center;
+}
+.sectionIntro strong { color: var(--or-clair); }
+
+/* ===== MUSIQUE ===== */
+.musique { padding: 6rem 0; }
+.musiqueInner { background: var(--texte); padding: 6rem 0; }
+.instrumentsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+.instrumentCard {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-top: 4px solid var(--couleur); border-radius: 4px; padding: 1.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.instrumentCard:hover { background: rgba(255,255,255,0.09); transform: translateY(-3px); }
+.instrumentNom { font-family: var(--font-titre); font-size: 1.4rem; font-weight: 900; color: var(--couleur); margin-bottom: 0.75rem; }
+.instrumentDesc { font-size: 0.875rem; color: rgba(245,230,195,0.75); line-height: 1.7; }
+.artistesGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem; }
+.artisteCard { background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; display: flex; gap: 0; flex-direction: column; transition: background 0.2s; }
+.artisteCard:hover { background: rgba(255,255,255,0.1); }
+.artisteImageWrapper { position: relative; height: 220px; overflow: hidden; }
+.artisteImage { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.artisteCard:hover .artisteImage { transform: scale(1.05); }
+.artisteBadge {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  background: var(--or); color: var(--texte); font-size: 0.7rem; font-weight: 700;
+  padding: 0.25rem 0.75rem; border-radius: 2rem; letter-spacing: 0.08em;
+}
+.artisteInfo { padding: 1.25rem 1.5rem; }
+.artisteNom { font-family: var(--font-titre); font-size: 1.1rem; color: var(--or-clair); margin-bottom: 0.5rem; }
+.artisteDesc { font-size: 0.875rem; color: rgba(245,230,195,0.75); line-height: 1.7; }
+.audioBox {
+  display: flex; gap: 1.25rem; align-items: flex-start;
+  background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.3);
+  border-radius: 4px; padding: 1.25rem 1.5rem;
+}
+.audioIcone { font-size: 1.8rem; color: var(--or-clair); flex-shrink: 0; line-height: 1; }
+.audioBox strong { color: var(--or-clair); display: block; margin-bottom: 0.3rem; }
+.audioBox p { font-size: 0.875rem; color: rgba(245,230,195,0.7); line-height: 1.6; }
+
+/* ===== VÊTEMENTS ===== */
+.vetements { padding: 6rem 0; background: var(--sable); }
+.vetementsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.vetementsTexte p { color: var(--texte-doux); line-height: 1.8; margin-bottom: 1rem; }
+.vetementsListe { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.vetementItem { border-left: 3px solid var(--or); padding-left: 1rem; }
+.vetementNom { font-family: var(--font-titre); font-size: 1rem; font-weight: 700; color: var(--terre); display: block; margin-bottom: 0.3rem; }
+.vetementItem p { font-size: 0.875rem; color: var(--texte-doux); line-height: 1.65; margin: 0; }
+.vetementsPhoto { display: flex; justify-content: center; }
+.vetementsImg { width: 90%; height: 700px; object-fit: cover; border-radius: 4px; box-shadow: -8px 8px 0 var(--sable-fonce); }
+
+/* ===== CUISINE ===== */
+.cuisine { padding: 6rem 0; }
+.cuisineInner { background: var(--vert); padding: 6rem 0; }
+.platSelecteur { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem; }
+.platBouton {
+  background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.2);
+  color: rgba(245,230,195,0.8); padding: 0.6rem 1.4rem; border-radius: 2rem;
+  font-size: 0.875rem; font-weight: 600; font-family: var(--font-corps);
+  cursor: pointer; transition: all 0.2s;
+}
+.platBouton:hover { background: rgba(255,255,255,0.15); color: var(--or-clair); }
+.platActif { background: var(--or) !important; border-color: var(--or) !important; color: var(--texte) !important; }
+.platAffiche {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  background: rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden;
+  animation: apparaitre 0.35s ease;
+}
+.platImageWrapper { height: 340px; overflow: hidden; }
+.platImage { width: 100%; height: 100%; object-fit: cover; }
+.platInfo { padding: 2rem; }
+.platNom { font-family: var(--font-titre); font-size: 2rem; font-weight: 900; color: var(--or-clair); margin-bottom: 0.5rem; }
+.platSaveur { display: block; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--or); text-transform: uppercase; margin-bottom: 1rem; }
+.platDesc { font-size: 0.95rem; color: rgba(245,230,195,0.8); line-height: 1.8; }
+
+/* ===== TRADITIONS ===== */
+.traditions { padding: 6rem 0; background: var(--blanc); }
+.traditionsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.traditionsPhoto { display: flex; }
+.traditionsImg { width: 100%; height: 460px; object-fit: cover; border-radius: 4px; box-shadow: 8px 8px 0 var(--sable-fonce); }
+.traditionsTexte p { color: var(--texte-doux); line-height: 1.8; margin-bottom: 1.5rem; }
+.traditionsTexte strong { color: var(--rouge); }
+.valeursGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.valeurCard {
+  background: var(--sable); border-radius: 4px; padding: 1.1rem 1.25rem;
+  border-top: 3px solid var(--or); transition: transform 0.2s;
+}
+.valeurCard:hover { transform: translateY(-2px); }
+.valeurTitre { font-family: var(--font-titre); font-size: 0.95rem; font-weight: 700; color: var(--terre); margin-bottom: 0.4rem; }
+.valeurDesc { font-size: 0.82rem; color: var(--texte-doux); line-height: 1.6; }
+
+/* ===== PATRIMOINE ===== */
+.patrimoine { background: var(--rouge); padding: 6rem 0; }
+.patrimoine .sectionIntro strong { color: var(--or-clair); }
+.patrimoineGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.patrimoineCard { background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; transition: transform 0.2s, background 0.2s; }
+.patrimoineCard:hover { transform: translateY(-4px); background: rgba(255,255,255,0.13); }
+.patrimoineImageWrapper { height: 200px; overflow: hidden; }
+.patrimoineImage { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.patrimoineCard:hover .patrimoineImage { transform: scale(1.06); }
+.patrimoineInfo { padding: 1.25rem; }
+.patrimoineNom { font-family: var(--font-titre); font-size: 1rem; font-weight: 700; color: var(--or-clair); margin-bottom: 0.5rem; }
+.patrimoineDesc { font-size: 0.84rem; color: rgba(245,230,195,0.75); line-height: 1.65; }
+
+/* ===== CITATION ===== */
+.citation { background: var(--texte); padding: 5rem 2rem; text-align: center; }
+.citation blockquote p { font-family: var(--font-titre); font-size: clamp(1.4rem, 3vw, 2.2rem); font-style: italic; color: var(--or-clair); max-width: 700px; margin: 0 auto 1rem; }
+.citation blockquote cite { font-size: 0.85rem; color: rgba(245,230,195,0.45); letter-spacing: 0.1em; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes apparaitre { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .identiteGrid, .vetementsGrid, .traditionsGrid { grid-template-columns: 1fr; }
+  .identitePhoto { order: -1; }
+  .platAffiche { grid-template-columns: 1fr; }
+  .platImageWrapper { height: 240px; }
+  .instrumentsGrid { grid-template-columns: 1fr; }
+  .artistesGrid { grid-template-columns: 1fr; }
+  .patrimoineGrid { grid-template-columns: 1fr; }
+  .valeursGrid { grid-template-columns: 1fr; }
+}

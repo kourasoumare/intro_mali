@@ -1,0 +1,5 @@
+.footer { background: var(--texte); color: var(--sable-fonce); text-align: center; padding: 2.5rem 2rem; margin-top: 4rem; }
+.drapeau { display: flex; justify-content: center; margin-bottom: 1rem; }
+.drapeau span { width: 24px; height: 16px; display: block; }
+.texte { font-family: var(--font-titre); font-size: 1.1rem; color: var(--or-clair); margin-bottom: 0.4rem; }
+.sous { font-size: 0.8rem; color: rgba(230, 210, 170, 0.5); }

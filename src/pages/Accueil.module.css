@@ -1,0 +1,88 @@
+.page { padding-top: 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(10,5,2,0.65) 0%, rgba(10,5,2,0.5) 60%, rgba(10,5,2,0.8) 100%);
+}
+.heroContenu { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+.heroSurtitre {
+  display: block; font-size: 0.8rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--or); margin-bottom: 1rem;
+  animation: fadeDown 0.8s ease both;
+}
+.heroTitre {
+  font-family: var(--font-titre); font-size: clamp(5rem, 18vw, 12rem);
+  font-weight: 900; color: var(--or-clair); line-height: 0.9;
+  animation: fadeUp 0.9s ease 0.15s both;
+}
+.heroAccroche {
+  font-size: clamp(1rem, 2.5vw, 1.3rem); color: rgba(245, 230, 195, 0.85);
+  margin-top: 1.25rem; font-style: italic; animation: fadeUp 0.9s ease 0.3s both;
+}
+.heroBtns {
+  display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem;
+  flex-wrap: wrap; animation: fadeUp 0.9s ease 0.45s both;
+}
+.heroDrapeau {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 6px; display: flex; flex-direction: column;
+}
+.bande { flex: 1; }
+
+.btnPrimaire {
+  background: var(--or); color: var(--texte); padding: 0.8rem 2rem;
+  font-weight: 700; font-size: 0.875rem; letter-spacing: 0.08em;
+  text-transform: uppercase; border-radius: 2px; transition: background 0.2s, transform 0.15s;
+}
+.btnPrimaire:hover { background: var(--or-clair); transform: translateY(-2px); }
+/*.btnSecondaire {
+  border: 1px solid rgba(200, 146, 42, 0.5); color: var(--or-clair);
+  padding: 0.8rem 2rem; font-weight: 600; font-size: 0.875rem;
+  letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+*/
+.btnSecondaire:hover { border-color: var(--or-clair); color: #fff; }
+
+.chiffres { background: var(--vert); display: flex; justify-content: center; flex-wrap: wrap; }
+.chiffreItem { padding: 2rem 3rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.15); flex: 1; min-width: 160px; }
+.chiffreItem:last-child { border-right: none; }
+.chiffreValeur { display: block; font-family: var(--font-titre); font-size: 2rem; font-weight: 900; color: var(--or-clair); }
+.chiffreLabel { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+
+.intro { padding: 6rem 0; background: var(--blanc); }
+.introGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.introTexte p { color: var(--texte-doux); font-size: 1rem; line-height: 1.8; }
+.lienTexte {
+  display: inline-block; margin-top: 1.5rem; color: var(--or); font-weight: 600;
+  font-size: 0.9rem; letter-spacing: 0.05em; border-bottom: 1px solid var(--or);
+  padding-bottom: 2px; transition: color 0.2s;
+}
+.lienTexte:hover { color: var(--rouge); }
+.introVisuel { display: flex; justify-content: center; }
+.introPhoto { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; box-shadow: 8px 8px 0 var(--sable-fonce); }
+
+.cartes { padding: 6rem 0; background: var(--sable); }
+.cartesGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+
+.cta { background: var(--rouge); padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.03) 20px, rgba(255,255,255,0.03) 40px);
+}
+.ctaTitre { font-family: var(--font-titre); font-size: clamp(1.8rem, 4vw, 3rem); color: var(--or-pale); position: relative; }
+.ctaSous { color: rgba(255,255,255,0.8); margin: 1rem auto 2.5rem; max-width: 500px; font-style: italic; position: relative; }
+.ctaBtns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+  .introGrid { grid-template-columns: 1fr; }
+  .introVisuel { order: -1; }
+  .introPhoto { height: 250px; }
+}

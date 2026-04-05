@@ -1,0 +1,61 @@
+.page { padding-top: 80px; min-height: 100vh; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background-size: cover; background-position: center;
+}
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(10,5,2,0.55) 0%, rgba(10,5,2,0.45) 50%, rgba(10,5,2,0.82) 100%);
+}
+.heroContenu { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+.heroSurtitre {
+  display: block; font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1rem; animation: fadeDown 0.8s ease both;
+}
+.heroTitre {
+  font-family: var(--font-titre); font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900; color: var(--or-clair); line-height: 1;
+  animation: fadeUp 0.9s ease 0.15s both;
+}
+.heroAccroche {
+  font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(245,230,195,0.85);
+  margin-top: 1.25rem; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.intro { padding: 6rem 0; background: var(--blanc); }
+.introGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.introTexte p { color: var(--texte-doux); font-size: 1rem; line-height: 1.8; }
+.introPhoto { display: flex; justify-content: center; }
+.introImg { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; box-shadow: 8px 8px 0 var(--sable-fonce); }
+
+.grilleSection { padding: 5rem 0; background: var(--sable); }
+.filtres { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin: 0 0 2rem; }
+.filtreBouton {
+  background: var(--blanc); border: 1.5px solid var(--sable-fonce);
+  color: var(--texte-doux); padding: 0.5rem 1.25rem; border-radius: 2rem;
+  font-size: 0.875rem; font-weight: 600; font-family: var(--font-corps);
+  transition: all 0.2s; cursor: pointer;
+}
+.filtreBouton:hover { border-color: var(--or); color: var(--or); }
+.filtreBouton.actif { background: var(--or); border-color: var(--or); color: var(--texte); }
+.compteur { font-size: 0.8rem; color: var(--texte-doux); opacity: 0.5; font-style: italic; margin-left: auto; }
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+.message { background: var(--vert); padding: 5rem 2rem; text-align: center; }
+.quote p {
+  font-family: var(--font-titre); font-size: clamp(1.3rem, 3vw, 2rem);
+  font-style: italic; color: var(--or-clair); max-width: 700px; margin: 0 auto;
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+  .introGrid { grid-template-columns: 1fr; }
+  .introPhoto { order: -1; }
+  .introImg { height: 260px; }
+}

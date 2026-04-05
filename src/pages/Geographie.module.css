@@ -1,0 +1,49 @@
+.page { padding-top: 80px; min-height: 100vh; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+.heroSection {
+  background-size: cover; background-position: center;
+  padding: 5rem 2rem 4rem; text-align: center; position: relative;
+  min-height: 420px; display: flex; align-items: center; justify-content: center;
+}
+.heroOverlay { position: absolute; inset: 0; background: rgba(10,5,2,0.65); }
+.heroContenu { position: relative; z-index: 2; }
+.heroSection :global(.titre) { color: var(--or-pale); }
+.heroSection :global(.surtitre) { color: var(--or-clair); border-color: var(--or-clair); }
+.heroSection :global(.sous) { color: rgba(245,230,195,0.75); }
+
+.stats { padding: 4rem 0; background: var(--sable); background-color: rgba(0,0,0,0.25); }
+.statsGrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem; opacity: 0; transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.statsGrid.visible { opacity: 1; transform: translateY(0); }
+
+.zonesSection { background: var(--blanc); padding: 5rem 0; }
+.zonesGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.zoneCard { background: var(--sable); border-radius: 4px; border-top: 4px solid; overflow: hidden; transition: transform 0.2s; }
+.zoneCard:hover { transform: translateY(-3px); }
+.zoneImageWrapper { height: 160px; overflow: hidden; }
+.zoneImage { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.zoneCard:hover .zoneImage { transform: scale(1.05); }
+.zoneContenu { padding: 1.25rem 1.5rem; }
+.zoneNom { font-family: var(--font-titre); font-size: 1.1rem; font-weight: 700; color: var(--texte); margin-bottom: 0.3rem; }
+.zonePct { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.zoneDesc { font-size: 0.875rem; color: var(--texte-doux); line-height: 1.7; }
+
+.regionsSection { padding: 5rem 0; background: var(--sable); background-color: rgb(137, 96, 43); }
+.regionsGrid { display: flex; flex-direction: column; border: 1px solid var(--sable-fonce); border-radius: 4px; overflow: hidden; background: var(--blanc); }
+.regionItem { border-bottom: 1px solid var(--sable-fonce); cursor: pointer; transition: background 0.15s; }
+.regionItem:last-child { border-bottom: none; }
+.regionItem:hover, .regionActive { background: var(--sable) !important; }
+.regionHeader { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; }
+.regionNum { font-family: var(--font-titre); font-size: 1.2rem; font-weight: 900; color: var(--or); min-width: 32px; }
+.regionNom { font-family: var(--font-titre); font-weight: 700; font-size: 1rem; color: var(--texte); flex: 1; }
+.regionArrow { font-size: 0.7rem; color: var(--or); }
+.regionDetail { padding: 0 1.5rem 1.25rem 4rem; animation: ouvrir 0.25s ease; }
+.regionDesc { font-size: 0.875rem; color: var(--texte-doux); line-height: 1.7; margin-bottom: 0.75rem; }
+.regionStats { display: flex; gap: 1.5rem; font-size: 0.8rem; color: var(--terre); font-weight: 600; }
+
+@keyframes ouvrir { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) { .zonesGrid { grid-template-columns: 1fr; } }
